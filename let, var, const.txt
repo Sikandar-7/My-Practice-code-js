@@ -1,0 +1,407 @@
+let, var, const 
+objects methods
+array methods
+
+classes
+function (callback, simple, anonymous function)
+closures
+event loop
+lexical scoping
+
+
+
+
+ver  
+
+declares function-scoped or globally-scoped variables, optionally initializing each to a value.
+ 
+
+For that reason, it is recommended to always declare variables at the top of their scope (the top of global code and the top of function code) so it's clear which variables are scoped to the current function.
+
+top 
+global 
+
+
+
+Redeclarations
+
+var a = 1;
+var a = 2;
+console.log(a); // 2
+var a;
+console.log(a); // 2; not undefined
+
+
+
+let 
+
+Variables declared with let have Block Scope
+
+Variables declared with let must be Declared before use
+
+Variables declared with let cannot be Redeclared in the same scope
+
+
+
+
+Const
+
+
+
+Variables defined with const cannot be Redeclared
+
+Variables defined with const cannot be Reassigned
+
+Variables defined with const have Block Scope
+
+
+
+When to use JavaScript const?
+Always declare a variable with const when you know that the value should not be changed.
+
+Use const when you declare:
+
+A new Array
+A new Object
+A new Function
+A new RegExp
+
+
+
+misleading
+
+not define a constant value   defines a constant reference to a value
+
+
+Because of this you can NOT:
+
+Reassign a constant value
+Reassign a constant array
+Reassign a constant object
+But you CAN:
+
+Change the elements of constant array
+Change the properties of constant object
+
+
+objects
+
+objects        Properties&value        	 Methods
+
+Car		car.name = Fiat		car.start()
+
+
+const car = {type:"Fiat", model:"500", color:"white"};
+
+
+Accessing Object Properties
+
+
+objectName.propertyName
+objectName["propertyName"]
+
+
+
+Objects are containers for Properties and Methods.
+Properties are named Values.(car.name)
+Methods are Functions stored as Properties.( car.start() )
+Properties can be primitive values, functions, or even other objects.
+
+
+
+In JavaScript, almost "everything" is an object.
+
+Objects are objects
+Maths are objects
+Functions are objects
+Dates are objects
+Arrays are objects
+Maps are objects
+Sets are objects
+
+
+Primitive
+
+string
+number
+bigint
+boolean
+undefined
+symbol
+null
+
+
+
+access nested objects 
+
+		dot notation or the bracket notation
+
+		myObj.myCars.car2;
+		myObj.myCars["car2"];
+		myObj["myCars"]["car2"];
+
+
+
+Object Methods
+
+Accessing
+objectName.methodName()
+
+Methods like call(), apply(), and bind() can refer this to any object.
+
+
+
+Object Constructors
+
+The JavaScript this Keyword
+			What is this?
+In JavaScript, the this keyword refers to an object.
+
+The this keyword refers to different objects depending on how it is used:
+
+In an object method, this refers to the object.
+Alone, this refers to the global object.
+In a function, this refers to the global object.
+In a function, in strict mode, this is undefined.
+In an event, this refers to the element that received the event.
+
+Methods like call(), apply(), and bind() can refer this to any object.
+
+
+
+this in a Method
+
+When used in an object method, this refers to the object.
+In the example on top of this page, this refers to the person object.
+Because the fullName method is a method of the person object.
+
+fullName : function() {
+  return this.firstName + " " + this.lastName;
+}
+
+this Alone
+
+When used alone, this refers to the global object.
+Because this is running in the global scope.
+In a browser window the global object is [object Window]:
+
+Example
+let x = this;
+
+
+
+this in a Function (Default)
+
+In a function, the global object is the default binding for this.
+In a browser window the global object is [object Window]:
+
+Example
+function myFunction() {
+  return this;
+}
+
+
+Explicit Function Binding
+	Function Borrowing
+
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+const member = {
+  firstName:"Hege",
+  lastName: "Nilsen",
+}
+let fullName = person.fullName.bind(member);
+
+
+
+This Precedence
+To determine which object this refers to; use the following precedence of order.
+
+Precedence	Object
+1	bind()
+2	apply() and call()
+3	Object method
+4	Global scope
+Is this in a function being called using bind()?
+
+Is this in a function being called using apply()?
+
+Is this in a function being called using call()?
+
+Is this in an object function (method)?
+
+Is this in a function in the global scope.
+
+
+
+
+
+JavaScript Arrays
+
+const person = ["John", "Doe", 46];
+
+
+Array:  yah index number use krta hain 
+const person = ["John", "Doe", 46];
+
+Object:  yah properties use krta ha 
+const person = {firstName:"John", lastName:"Doe", age:46};
+
+
+
+The length Property   
+Accessing the First Array Element  let fruit = fruits[0];
+Accessing the Last Array Element   let fruit = fruits[fruits.length - 1];
+Looping Array Elements
+Adding Array Elements
+Associative Arrays
+
+
+Associative Arrays
+	Arrays with named indexes are called associative arrays (or hashes).
+
+JavaScript does not support arrays with named indexes.
+In JavaScript, arrays always use numbered indexes.  
+
+
+
+JavaScript new Array()
+
+const points = new Array();  not use 
+const points = [];
+
+
+Basic Array Methods
+
+Array length
+Array toString()
+Array at()
+Array join()
+Array pop()   removes the last element
+Array push()   adds a new element (at the end)
+Array shift()   removes the first array element
+Array unshift() at the beginning
+Array delete()  pop/push
+Array concat()  
+Array copyWithin()????????????????????????????????????
+Array flat() sub-array  ???????????
+Array flatMap() ????????????????
+Array splice()  add new items
+
+fruits.splice(2, 0, "Lemon", "Kiwi");
+fruits.splice(0, 1);
+
+Array toSpliced()   const spliced = months.toSpliced(0, 1);
+Array slice()    a piece of an array into a new array
+
+Automatic toString()   converts an array to a comma separated string
+
+
+JavaScript Array Search
+
+
+
+Array indexOf() array.indexOf(item, start)
+Array lastIndexOf() array.lastIndexOf(item, start)  
+Array includes()  array.includes(search-item)
+Array find() ?????????
+Array findIndex()
+Array findLast() let high = temp.findLast(x => x > 40);
+Array findLastIndex() let pos = temp.findLastIndex(x => x > 40);
+
+
+JavaScript Sorting Arrays
+
+Alphabetic Sort
+
+Array sort()
+Array reverse()
+
+Array toSorted() , keeping the original array
+Array toReversed() keeping the original array
+Sorting Objects
+
+Numeric Sort
+
+Numeric Sort
+Random Sort
+Math.min() Math.min.apply(null, [1, 2, 3]) is equivalent to Math.min(1, 2, 3).
+Math.max() 
+Home made Min()
+Home made Max()
+
+
+
+
+
+JavaScript Classes
+
+
+A JavaScript class is not an object.
+It is a template for JavaScript objects.
+
+
+	
+Function
+
+
+Type	                  Keyword/Usage
+
+Function Declaration	function greet() {}
+Function Expression	const greet = function(){}
+Arrow Function	        const greet = () => {}
+Anonymous Function	function() {}
+IIFE	                (function(){})()
+Constructor Function	function Person(){}
+Generator Function  	function* gen(){}
+Async Function		async function name(){}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
