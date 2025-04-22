@@ -1,0 +1,61 @@
+
+// Sum of All Numbers in an Array
+// 🔹 Task: Calculate and print the sum of all numbers using a for loop.
+// 🧪 Example:
+
+// let arr = [1, 2, 3];
+
+
+let array = [1, 2, 3];
+let sum = 0;
+
+for (let i = 0; i < array.length; i++) {
+    sum  += array[i];  
+console.log(sum);
+}
+
+
+
+// Find the Maximum Number in an Array
+// 🔹 Task: Use a for loop to find and print the largest number in an array.
+// 🧪 Example:
+// let arr = [3, 9, 1]
+
+
+let maxNum = [3, 9 , 1];
+
+for (let i = 0; i < maxNum.length; i++) {
+   if (maxNum[i] >= 9 ) {
+    console.log(maxNum[i]); 
+   }
+    
+}
+
+
+// Count Even Numbers in an Array
+// 🔹 Task: Count how many numbers are even using if with a for loop.
+// 🧪 Example:
+// let arr = [2, 5, 4, 7];
+
+let arry1 = [2, 5, 4, 7];
+let even = []
+
+for (let i = 0; i < arry1.length; i++) {
+    if (arry1[i] % 2 ===0  ) {
+        // console.log(arry1[i]);
+        even.push(arry1[i]);     
+    }
+}            
+console.log(even.length);
+
+
+
+
+    
+
+
+
+
+
+
+
