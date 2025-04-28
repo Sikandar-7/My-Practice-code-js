@@ -1,22 +1,23 @@
-// let a = 5
-// let b = 2
+let a = 5
+let b = 2
 
-// if (a = 5) {
-//     console.log("a" + b)
-// }else if (b = 2) {
-//     console.log("b" + a)
-// }else{
-//     console.log("s",c )
-// }
+if (a = 5) {
+    console.log("a" + b)
+}else if (b = 2) {
+    console.log("b" + a)
+}else{
+    console.log("s",c )
+}
 
 
 
 // let arr = [1,2,4,3,5,-4];
 
 // for (let i = 0; i < arr.length -1 ; i++) { 
-//     for (let j = 0; j < arr.length +1 ; j++) {
+//     for (let j = 0; j < arr.length -1 ; j++) {
 
 //         if (arr[j] > arr[j + 1]) {
+
 //             let temp = arr[j];
 //             arr[j] = arr[j + 1];
 //             arr[j + 1] = temp;
@@ -24,6 +25,8 @@
 //     }
 // }
 // console.log(arr)
+
+
 
 
 // let arr = [5, 2, 9, 1, 3];
@@ -35,7 +38,7 @@
 //     }
 //   }
 
-// let arr = [5, 2, 9, 1, 3];
+let arr = [5, 2, 9, 1, 3];
 
 // for(let i = 0 ; i < arr.length ; i++ ){
 //     for(let j = i+1 ; j < arr.length; j++){
@@ -49,20 +52,20 @@
 // }
 // console.log(arr)
 
-// for(let i = 0 ; i < arr.length ; i++){
-//     for(let j = i +1 ; j < arr.length ; j++){
-//         if (arr[i]>arr[j]) {
+for(let i = 0 ; i < arr.length ; i++){
+    for(let j = i +1 ; j < arr.length ; j++){
+        if (arr[i]>arr[j]) {
             
-//             let temp = arr[i];
-//             arr[i] = arr[j];
-//             arr[j] = temp ;
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp ;
             
-//         }
+        }
        
-//     }
+    }
     
-// }
-// console.log(arr)
+}
+console.log(arr)
 
 // ascending
 
@@ -85,10 +88,10 @@
 // console.log(arr) 
 
 
-                // → [2, 5, 9, 1, 3]  
-                // → [2, 1, 9, 5, 3]  
-                // → [2, 1, 5, 3, 9]  
-                // → [1, 2, 3, 5, 9]
+//                 → [2, 5, 9, 1, 3]  
+//                 → [2, 1, 9, 5, 3]  
+//                 → [2, 1, 5, 3, 9]  
+//                 → [1, 2, 3, 5, 9]
 
 
 
@@ -212,51 +215,51 @@
 
 
 
-let arr3 = [ 1, 2 ,3 , 4, 5, 1,2,5,3  ]
-let duparr2 = []
+// let arr3 = [ 1, 2 ,3 , 4, 5, 1,2,5,3  ]
+// let duparr2 = []
 
-for (let i = 0; i < arr3.length; i++) {
-    for (let j = i + 1; j < arr3.length; j++) {
-        if (arr3[i]===arr3[j]) {
+// for (let i = 0; i < arr3.length; i++) {
+//     for (let j = i + 1; j < arr3.length; j++) {
+//         if (arr3[i]===arr3[j]) {
 
-            let found = false ;
-            for (let k = 0; k < duparr2.length; k++) {
-                if (duparr2[k]=== arr3[i]) {    
-                    found = true;
-                }
-            }
-            if (!found) {
-                duparr2.push(arr3[i])
-            }
-        }
-    }
-}
+//             let found = false ;
+//             for (let k = 0; k < duparr2.length; k++) {
+//                 if (duparr2[k]=== arr3[i]) {    
+//                     found = true;
+//                 }
+//             }
+//             if (!found) {
+//                 duparr2.push(arr3[i])
+//             }
+//         }
+//     }
+// }
 
-console.log(duparr2)
+// console.log(duparr2)
 
 
-let arr = [1, 2, 3,4 ,3 ,5,5,2 ]
-let duplArr2 =[]
+// let arr = [1, 2, 3,4 ,3 ,5,5,2 ]
+// let duplArr2 =[]
 
-for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-        if (arr[i] === arr[j]) {
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//         if (arr[i] === arr[j]) {
             
-            let found = false;
+//             let found = false;
 
-            for (let k = 0; k < duplArr2.length; k++) {
-                if (duplArr2[k] === arr[i]) {
-                    found = true;
-                }   
-            }
-            if (!found) {
-                duplArr2.push(arr[i]);
-            }
-        } 
-    }    
-}
+//             for (let k = 0; k < duplArr2.length; k++) {
+//                 if (duplArr2[k] === arr[i]) {
+//                     found = true;
+//                 }   
+//             }
+//             if (!found) {
+//                 duplArr2.push(arr[i]);
+//             }
+//         } 
+//     }    
+// }
 
-console.log(duplArr2);
+// console.log(duplArr2);
 
 
 
