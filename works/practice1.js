@@ -1,20 +1,20 @@
-let arr = [1,2,4,3,5,-4];
+// let arr = [1,2,4,3,5,-4];
 
-for (let i = 0; i < arr.length - 1; i++) {
-    for (let j = 0; j < arr.length ; j++) {
+// for (let i = 0; i < arr.length - 1; i++) {
+//     for (let j = 0; j < arr.length ; j++) {
         
-        if (arr[j] > arr[j+1]) {
-            let tem = arr[j];
+//         if (arr[j] > arr[j+1]) {
+//             let tem = arr[j];
 
-            arr[j] = arr[j + 1];
-            arr[j + 1] = tem;
+//             arr[j] = arr[j + 1];
+//             arr[j + 1] = tem;
             
-        }
+//         }
         
-    }
+//     }
     
-}
-console.log(arr)
+// }
+// console.log(arr)
 
 // let array = [10, 20, 30, 40, 50];
 
@@ -61,7 +61,7 @@ for (let i = 0; i < array.length/2; i++) {
     let temp = array[j];
     array[j] = array[j + 1];
     array[j + 1] = temp;
-    console.log(array);
+    // console.log(array);
 
   }
 }
@@ -69,6 +69,17 @@ console.log(array);
 
 
 
+let arr1 =  [1,2,3,4,5,6]
+
+for (let i = 0; i < arr1.length/2; i++) {
+
+    let temp = arr1[i] ;
+    arr1[i] = arr1[i + arr1.length/2];
+    arr1[i + arr1.length/2] = temp;
+     
+}
+
+console.log(arr1)
 
 
 

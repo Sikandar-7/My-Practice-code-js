@@ -1,13 +1,13 @@
-let a = 5
-let b = 2
+// let a = 5
+// let b = 2
 
-if (a = 5) {
-    console.log("a" + b)
-}else if (b = 2) {
-    console.log("b" + a)
-}else{
-    console.log("s",c )
-}
+// if (a = 5) {
+//     console.log("a" + b)
+// }else if (b = 2) {
+//     console.log("b" + a)
+// }else{
+//     console.log("s",c )
+// }
 
 
 
@@ -38,7 +38,7 @@ if (a = 5) {
 //     }
 //   }
 
-let arr = [5, 2, 9, 1, 3];
+// let arr = [5, 2, 9, 1, 3];
 
 // for(let i = 0 ; i < arr.length ; i++ ){
 //     for(let j = i+1 ; j < arr.length; j++){
@@ -52,40 +52,41 @@ let arr = [5, 2, 9, 1, 3];
 // }
 // console.log(arr)
 
-for(let i = 0 ; i < arr.length ; i++){
-    for(let j = i +1 ; j < arr.length ; j++){
-        if (arr[i]>arr[j]) {
+// for(let i = 0 ; i < arr.length ; i++){
+//     for(let j = i +1 ; j < arr.length ; j++){
+//         if (arr[i]>arr[j]) {
             
-            let temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp ;
+//             let temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp ;
             
-        }
+//         }
        
-    }
+//     }
     
-}
-console.log(arr)
+// }
+// console.log(arr)
 
 // ascending
 
-// let arr = [5, 2, 9, 1, 3];
+let arr = [5, 2, 9, 1, 3];
 
 // arr[i] = [5, 2, 9, 1, 3];
 // arr[j] = [5, 2, 9, 1, 3];
 
-// for(let i= 0 ; i < arr.length ; i++){
-//     for(let j = i+1 ; j < arr.length ; j++ ){
-//         if (arr[i]>arr[j]){
+for(let i= 0 ; i < arr.length ; i++){
+    for(let j = i+1 ; j < arr.length ; j++ ){
+        if (arr[i]<arr[j]){
 
-//             let temp = arr[i];
-//             arr[i] = arr[j];
-//             arr[j] = temp;
-//         }
-//     }
-// }
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+}
+console.log(arr) 
 
-// console.log(arr) 
+
 
 
 //                 → [2, 5, 9, 1, 3]  
