@@ -58,8 +58,8 @@ console.log(uniqueArray);
 
 
 let array3 = [2,3,4,8,9]
-
 let max = array3[0];
+
 
 for (let i = 1; i < array3.length; i++) {
     if (array3[i] > max ) {
@@ -72,113 +72,113 @@ console.log(max);
 
 
 
-// let arr1 = [1,2,3,4]
+let arr1 = [1,2,3,4]
 
-// let countNumber = 0;
-// for (let i = 0; i < arr1.length; i++) {
-//     countNumber += array1[i] ;
-// }
-// console.log(countNumber);
+let countNumber = 0;
+for (let i = 0; i < arr1.length; i++) {
+    countNumber += array1[i] ;
+}
+console.log(countNumber);
 
 
 
 // small and sorting
 
-// let arr1 = [1,2,3,4,7,9,8]
+let arr1 = [1,2,3,4,7,9,8]
 
-// for (let i = 0; i < arr1.length; i++) {
-//     for (let j = i + 1; j < arr1.length; j++) {
-//         if (arr1[i] > arr1[j]) {
+for (let i = 0; i < arr1.length; i++) {
+    for (let j = i + 1; j < arr1.length; j++) {
+        if (arr1[i] > arr1[j]) {
             
-//             let temp = arr1[i];
-//             arr1[i] = arr1[j];
-//             arr1[j] = temp ;
-//         }
+            let temp = arr1[i];
+            arr1[i] = arr1[j];
+            arr1[j] = temp ;
+        }
         
-//     }    
-// }
+    }    
+}
 
-// console.log(arr1);
+console.log(arr1);
 
-// let small = arr1[0];
-// console.log(small);
-
-
-
-//sorting and large 
-
-// let arr1 = [1,2,3,4,7,9,5,8]
-
-// for (let i = 0; i < arr1.length; i++) {
-//     for (let j = i+ 1; j < arr1.length; j++) {
-
-//         if (arr1[i] < arr1[j]) {
-//             let temp = arr1[i];
-//             arr1[i] = arr1[j]
-//             arr1[j] = temp ;
-//         }
-//     }
-// }
-// console.log(arr1);
-// let large =  arr1[0];
-// console.log(large);
+let small = arr1[0];
+console.log(small);
 
 
-// //  frequency 
 
-// let arr = ['a', 'b', 'a', 'c', 'b', 'a'];
-// let frequency = {};
-// for (let i = 0; i < arr.length; i++) {
-//     let element = arr[i];
-//     if (frequency[element]) {
-//         frequency[element]++;
-//     }else{
-//         frequency[element] = 1 ;
-//     }
-// }
-// console.log(frequency);
+sorting and large 
 
+let arr1 = [1,2,3,4,7,9,5,8]
 
-// let arr4 = ['a', 'b', 'c' , 'a', 'c', 'b', 'a'];
-// let frequency1 = {}
+for (let i = 0; i < arr1.length; i++) {
+    for (let j = i+ 1; j < arr1.length; j++) {
 
-// for (let i = 0; i < arr4.length; i++) {
-
-//     if (frequency1[arr4[i]]) {
-//         frequency1[arr4[i]]++;   
-//     }else{
-//         frequency1[arr4[i]] = 1
-//     }
-// }
-
-// console.log(frequency1);
+        if (arr1[i] < arr1[j]) {
+            let temp = arr1[i];
+            arr1[i] = arr1[j]
+            arr1[j] = temp ;
+        }
+    }
+}
+console.log(arr1);
+let large =  arr1[0];
+console.log(large);
 
 
-// find the most frequent element and 
+//  frequency 
 
-//  let arr21 = [2, 3, 2, 5, 2, 3];
+let arr = ['a', 'b', 'a', 'c', 'b', 'a'];
+let frequency = {};
+for (let i = 0; i < arr.length; i++) {
+    let element = arr[i];
+    if (frequency[element]) {
+        frequency[element]++;
+    }else{
+        frequency[element] = 1 ;
+    }
+}
+console.log(frequency);
 
-//  let frequency21 = {}
-//  let max1 = 0 ;
-//  let mostFrequency = null;
 
-//  for (let i = 0; i < arr21.length; i++) {
+let arr4 = ['a', 'b', 'c' , 'a', 'c', 'b', 'a'];
+let frequency1 = {}
 
-//     let element = arr21[i];
-//     if (frequency21[element]) {
-//         frequency21[element]++ ;
-//     }else{
-//         frequency21[element] = 1
-//     }
-//     if (frequency21[element] > max1) {
+for (let i = 0; i < arr4.length; i++) {
 
-//         max1 = frequency21[element];
-//         mostFrequency = element;
-//     }
-//  }
-// console.log(frequency21);
-// console.log(max1);
-// console.log(mostFrequency);
+    if (frequency1[arr4[i]]) {
+        frequency1[arr4[i]]++;   
+    }else{
+        frequency1[arr4[i]] = 1
+    }
+}
+
+console.log(frequency1);
+
+
+find the most frequent element and 
+
+ let arr21 = [2, 3, 2, 5, 2, 3];
+
+ let frequency21 = {}
+ let max1 = 0 ;
+ let mostFrequency = null;
+
+ for (let i = 0; i < arr21.length; i++) {
+
+    let element = arr21[i];
+    if (frequency21[element]) {
+        frequency21[element]++ ;
+    }else{
+        frequency21[element] = 1
+    }
+    if (frequency21[element] > max1) {
+
+        max1 = frequency21[element];
+        mostFrequency = element;
+    }
+ }
+console.log(frequency21);
+console.log(max1);
+console.log(mostFrequency);
 
 let array22 = [2,3,4,2,4,5,6,5,1,5]
 let frequency22 = {}
@@ -244,29 +244,6 @@ for(let char of str){
     } 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

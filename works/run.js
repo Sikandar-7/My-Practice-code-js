@@ -1,28 +1,29 @@
-
-
-
-
-
-let arr = [2, 3, 2, 5, 2, 3];
-let frequency = {};
-let maxCount = 0;
-let mostFrequent = null;
-
-for (let i = 0; i < arr.length; i++) {
-    let element = arr[i];
-    if (frequency[element]) {
-        frequency[element]++;
-    } else {
-        frequency[element] = 1;
+const company = {
+    name: "TechSoft",
+    founded: 2010,
+    employees: {
+      emp1: { name: "Ahmed", role: "Developer" },
+      emp2: { name: "Sara", role: "Designer" }
     }
+  };
+  for (let key in company) {
     
-    if (frequency[element] > maxCount) {
-        maxCount = frequency[element];
-        mostFrequent = element;
+    if (typeof company[key] === "object") {
+      for (let innerKey in company[key]) {
+        if (typeof company[key][innerKey] === "object") {
+          for (let prop in company[key][innerKey]) {
+            console.log(`${key}.${innerKey}.${prop}: ${company[key][innerKey][prop]}`);
+          }
+        } else {
+          console.log(`${key}.${innerKey}: ${company[key][innerKey]}`);
+        }
+      }
+    } else {
+      console.log(`${key}: ${company[key]}`);
     }
-}
-console.log(frequency);
-
-console.log("Most Frequent Element:", mostFrequent);
+  }
 
 
+
+
+  
